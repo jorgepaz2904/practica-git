@@ -3,7 +3,7 @@ name: Practica CI JAVA
 on:
    pull_request:
       branches:
-         - develop
+         - master
 
 jobs: 
   build:
