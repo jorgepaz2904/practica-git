@@ -19,7 +19,7 @@ jobs:
        - name: Ejecuta las pruebas de integracion
          run: mvn verify 
        - name: Ejecutar el mvn deploy 
-         run: mvn deploy -Dtoken=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
+         run: mvn deploy
          
 
 
