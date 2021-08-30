@@ -19,18 +19,7 @@ jobs:
        - name: Ejecuta las pruebas de integracion
          run: mvn verify 
 
-   publish:
-      name: Publicar paquete
-      runs-on: ubuntu-latest
-      steps: 
-         - uses: actions/checkout@v2
-         - name: Configurar el Repositorio 
-           uses: actions/setup-java@v2
-           with:
-              java-version: '11'
-              distribution: 'adopt'
-              server-id: github
-           run: mvn deploy -Dtoken=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
+
 
 
            
