@@ -18,8 +18,24 @@ jobs:
             cache: maven
        - name: Ejecuta las pruebas de integracion
          run: mvn verify 
-       - name: Ejecutar el mvn deploy 
-         run: mvn deploy
+       - name: Compilar proyecto 
+         run: mvn clean install
+
+  deploy:
+     name: Deploy to cluster
+     runs-on: ubuntu-latest
+     steps:
+       - uses:  actions/checkout@master
+       - name: Construir y subir a Docker hub 
+         uses: docker/build-push-action@v1
+         with:
+            username: ${{secretes.DOCKER_USERNAME}}
+            password: ${{secretes.DOCKER_PASSWORD}}
+            repository: ${{ github.repository }}
+            tag_with_ref: true
+            tag_with_sha: true
+            tags: ${{ github.sha }}
+       
          
 
 
