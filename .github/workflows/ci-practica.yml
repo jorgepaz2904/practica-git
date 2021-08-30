@@ -16,12 +16,13 @@ jobs:
             java-version: '11'
             distribution: 'adopt'
             cache: maven
-       - name: Construye el 
+       - name: Ejecuta las pruebas de integracion
          run: mvn verify 
 
    publish:
-       runs-on: ubuntu-latest
-       steps: 
+      name: Publicar paquete
+      runs-on: ubuntu-latest
+      steps: 
          - uses: actions/checkout@v2
          - name: Configurar el Repositorio 
            uses: actions/setup-java@v2
@@ -29,7 +30,6 @@ jobs:
               java-version: '11'
               distribution: 'adopt'
               server-id: github
-         - name: publicar package
            run: mvn deploy -Dtoken=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
 
 
