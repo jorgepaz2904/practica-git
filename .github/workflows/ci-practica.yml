@@ -18,10 +18,11 @@ jobs:
             cache: maven
        - name: Ejecuta las pruebas de integracion
          run: mvn verify 
+       - name: Ejecutar el mvn deploy 
+         run: mvn deploy -Dtoken=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
+         
 
 
 
-
-           
 
 
