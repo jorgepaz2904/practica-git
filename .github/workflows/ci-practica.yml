@@ -22,6 +22,8 @@ jobs:
          run: mvn clean install
 
   deploy:
+    runs-on: ubuntu-latest
+    steps:
        - name: Revisa el Repo 
          uses: actions/checkout@v2
       
@@ -45,6 +47,7 @@ jobs:
            tags: ${{ secrets.DOCKER_USERNAME }}/practica:latest
            cache-from: type=local,src=/tmp/.buildx-cache
            cache-to: type=local,dest=/tmp/.buildx-cache
+           
        - name: Resumen de imágenes
          run: echo ${{ steps.docker_build.outputs.digest }}
 
