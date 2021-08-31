@@ -42,7 +42,7 @@ jobs:
          context: ./
          file: ./Dockerfile
          push: true
-         tags: username: ${{ secrets.DOCKER_USERNAME }}/practica:latest
+         tags: ${{ secrets.DOCKER_USERNAME }}/practica:latest
          cache-from: type=local,src=/tmp/.buildx-cache
          cache-to: type=local,dest=/tmp/.buildx-cache
      - name: Resumen de imágenes
