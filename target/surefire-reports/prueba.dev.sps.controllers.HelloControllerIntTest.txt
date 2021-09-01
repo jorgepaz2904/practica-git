@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: prueba.dev.sps.controllers.HelloControllerIntTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.286 s - in prueba.dev.sps.controllers.HelloControllerIntTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.237 s - in prueba.dev.sps.controllers.HelloControllerIntTest
